@@ -4,14 +4,14 @@ const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 
 // Check if the mapToken is set properly
 const mapToken = process.env.MAP_TOKEN;
-console.log("MAP_TOKEN",mapToken);
+console.log("MAP_TOKEN",process.env.MAP_TOKEN);
 
 if (!mapToken) {
     console.error('Error: Mapbox access token is missing. Please set the map_Token environment variable.');
     process.exit(1); // Exit the application if the token is not set
 }
 
-const geocodingClient = mbxGeocoding({ accessToken: mapToken });
+const geocodingClient = mbxGeocoding({ accessToken: process.env.MAP_TOKEN });
 
 module.exports.index = async (req, res) => {
     try {
