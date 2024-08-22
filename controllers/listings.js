@@ -3,7 +3,7 @@ const Listing = require("../models/listing");
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 
 // Check if the mapToken is set properly
-const mapToken = process.env.MAP_TOKEN||pk.eyJ1IjoiY2hhcmFuMjciLCJhIjoiY2x6dHZzM2ltMjBtdTJrcjdzYjhvdjd0eSJ9.XP9om7q-tMKcTlnSYuKlOw;
+const mapToken = process.env.MAP_TOKEN;
 console.log("MAP_TOKEN",mapToken);
 
 if (!mapToken) {
