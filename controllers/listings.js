@@ -3,12 +3,8 @@ const Listing = require("../models/listing");
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 
 // Check if the mapToken is set properly
-console.log(process.env.MAP_TOKEN,process.env.MAP_TOKEN,process.env.CLOUD_NAME,process.env.CLOUD_API_KEY
-    ,process.env.CLOUD_API_SECRET,process.env.ATLASDB_URL,
-    process.env.SECRET);
 
 const mapToken = process.env.MAP_TOKEN;
-console.log("MAP_TOKEN",process.env.MAP_TOKEN);
 
 if (!mapToken) {
     console.error('Error: Mapbox access token is missing. Please set the map_Token environment variable.');
